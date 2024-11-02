@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AmpUp Flasher</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/styles-1.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWT408TBEN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BWT408TBEN');
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <div class="sticky top_menu">
+          <div class="top">
+            <div><p class="logo_left title-2">AmpUp Flasher</p></div>
+            <div><img class="logo_right" src="images/kashmir.png" alt="AmpUp logo"/></div>
+          </div>
+          <ul>
+            <li class="left"><a href="index.html">VoyagerRFv1</a></li>
+            <li class="left"><a href="v2.html">VoyagerRFv2</a></li>
+            <li class="left"><a href="micro.html">VoyagerRF Micro</a></li>
+            <li class="left"><a class="current" href="#">AmpUp</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="cont-dash">
+      <div class="title-cont">
+        <p class="title-2">Flash AmpUp</p>
+      </div>
+      <div>
+        <p>Choose the different versions to install on your <a href="#">AmpUp board</a>. [Add any relevant information here.]</p>
+        <p>The USBC Serial option is for testing/flashing the board using the ESP web console. This will stop the GPIO pins transmission and will only work via USBC with the PC.</p>
+      </div>
+      <div class="button-grid">
+        <!-- Placeholder for installation buttons -->
+        <div>
+          <div class="double-button">
+            <esp-web-install-button class="btn-main" manifest="webflash/ampup/manifest_v1.0.0.json">
+              <button class="btn bg-aa btn-block p-2 shadow bold" slot="activate">AmpUp v1.0.0</button>
+            </esp-web-install-button>
+            <esp-web-install-button class="btn-sec" manifest="webflash/ampup/manifest_v1.0.0_serial.json">
+              <button class="btn bg-aa btn-block p-2 shadow bold" slot="activate">USBC Serial</button>
+            </esp-web-install-button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions Section -->
+      <div class="title-cont">
+        <p class="title-2">Instructions</p>
+      </div>
+      <div class="">
+        <p><b>Step 1.</b> Open the website and connect the board holding the BOOT button.</p>
+        <p align="center">
+          <img src="images/ampup_boot.png" width="50%"/>
+        </p><br>
+
+        <p><b>Step 2.</b> Select the version you want to flash and select the "USB JTAG/serial debug unit".</p>
+        <p align="center">
+          <img src="images/ampup_connect.png" width="60%"/>
+        </p><br>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>Powered by <a href="https://esphome.github.io/esp-web-tools/">ESP-Web-Tools</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
